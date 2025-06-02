@@ -1,0 +1,55 @@
+##################
+# Defaults
+##################
+
+defaults:
+  - _self_
+  - spectrogram: melspec
+  - preloss: log
+  - optimizer: adamw
+
+#######################
+# General Settings
+#######################
+
+general:
+  # Directory to log results
+  log_dir: ${hydra:runtime.cwd}/logs
+  # Log frequency
+  log_every: 200
+  # Directory to find target sounds
+  target: ${hydra:runtime.cwd}/data/valentine.wav
+
+  # Sampling rate for the target
+  sample_rate: 44100
+  # Frame length
+  frame_length: 1024
+  # Hop length
+  hop_length: 1024
+  # Upsample glottis
+  upsample_glottis: 8
+
+  # Number of iterations
+  iters: 2000
+  # Learning rate
+  lr: 0.01
+
+  # Audio processing parameters
+  n_fft: 512
+  win_length: 512
+  audio_hop_length: 256
+  pad: 0
+  power: 2.0
+  n_mels: 64
+  f_min: 60.0
+  f_max: 7800.0
+
+######################
+# System Settings
+######################
+
+system:
+  # Random seed for reproducibility
+  seed: 42
+  # Device to run process on. Options: ["cpu", "cuda"]
+  device: cpu

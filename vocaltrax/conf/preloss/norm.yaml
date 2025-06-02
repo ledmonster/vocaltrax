@@ -1,0 +1,4 @@
+# Normalization preloss function
+name: norm
+fun:
+  _target_: utils.misc.preloss_norm

@@ -1,0 +1,4 @@
+# AdamW optimizer
+name: adamw
+fun:
+  _target_: optax.adamw

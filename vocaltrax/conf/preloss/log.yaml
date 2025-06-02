@@ -1,0 +1,4 @@
+# Logarithmic preloss function
+name: log
+fun:
+  _target_: utils.misc.preloss_log

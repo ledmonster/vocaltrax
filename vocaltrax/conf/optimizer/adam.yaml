@@ -1,0 +1,4 @@
+# Adam optimizer
+name: adam
+fun:
+  _target_: optax.adam

@@ -1,0 +1,9 @@
+# Regular spectrogram configuration
+name: spec
+fun:
+  _target_: utils.audio.spec
+  n_fft: ${general.n_fft}
+  win_length: ${general.win_length}
+  hop_length: ${general.audio_hop_length}
+  pad: ${general.pad}
+  power: ${general.power}

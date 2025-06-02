@@ -1,0 +1,11 @@
+# Multiscale mel spectrogram configuration
+name: multiscale
+fun:
+  _target_: utils.audio.multiscalemel
+  n_fft: ${general.n_fft}
+  pad: ${general.pad}
+  power: ${general.power}
+  n_mels: ${general.n_mels}
+  sample_rate: ${general.sample_rate}
+  f_min: ${general.f_min}
+  f_max: ${general.f_max}

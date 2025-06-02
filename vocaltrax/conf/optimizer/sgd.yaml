@@ -1,0 +1,4 @@
+# SGD optimizer
+name: sgd
+fun:
+  _target_: optax.sgd

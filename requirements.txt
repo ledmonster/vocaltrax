@@ -1,0 +1,13 @@
+jax
+jaxlib
+optax
+numpy
+tqdm
+soundfile
+flax
+rich
+hydra-core
+chex
+crepe
+audax
+tensorflow

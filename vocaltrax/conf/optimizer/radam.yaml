@@ -1,0 +1,4 @@
+# RAdam optimizer
+name: radam
+fun:
+  _target_: optax.radam
