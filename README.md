@@ -18,7 +18,7 @@ conda activate vocaltrax
 pip install -r requirements.txt
 ```
 
-By default, we install JAX for CPU. You can find more details in the [JAX documentation](https://github.com/google/jax#installation) on using JAX with your accelerators. We also install [CREPE](CREPE: A Convolutional Representation for Pitch Estimation), which requires tensorflow and it's installed for CPU by default.
+By default, we install JAX for CPU. You can find more details in the [JAX documentation](https://github.com/google/jax#installation) on using JAX with your accelerators. We also install [CREPE: A Convolutional Representation for Pitch Estimation](https://arxiv.org/abs/1802.06182), which requires tensorflow and it's installed for CPU by default.
 
 ## Running
 
@@ -42,7 +42,7 @@ Please cite this work as follows:
 ```bibtex
 @inproceedings{mo2024articulatory,
   title={Articulatory Synthesis of Speech and Diverse Vocal Sounds via Optimization},
-  author={Mo, Luke and Cherep, Manuel and Singh, Nikhil and Langford, Quinn and Maes, Patricia},
+  author={Mo*, Luke and Cherep*, Manuel and Singh*, Nikhil and Langford, Quinn and Maes, Patricia},
   booktitle={Audio Imagination: NeurIPS 2024 Workshop AI-Driven Speech, Music, and Sound Generation}
 }
 ```
