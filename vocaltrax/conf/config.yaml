@@ -34,6 +34,11 @@ general:
   # Learning rate
   lr: 0.01
 
+  # Smoothing blend
+  blend: 0.5
+  # Smoothing frequency
+  smooth_every: 200
+
   # Audio processing parameters
   n_fft: 512
   win_length: 512

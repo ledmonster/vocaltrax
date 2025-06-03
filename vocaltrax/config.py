@@ -52,6 +52,11 @@ class General:
     # Learning rate
     lr: float
 
+    # Smoothing blend
+    blend: float
+    # Smoothing frequency
+    smooth_every: int
+
     # Audio processing parameters
     n_fft: int
     win_length: int

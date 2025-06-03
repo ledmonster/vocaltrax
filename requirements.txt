@@ -11,3 +11,4 @@ chex
 crepe
 audax
 tensorflow
+scipy

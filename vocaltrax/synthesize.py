@@ -31,6 +31,7 @@ import soundfile
 import json
 import crepe
 import numpy as np
+import scipy.signal
 from omegaconf import OmegaConf
 from config import Config
 from datetime import datetime
@@ -149,6 +150,21 @@ def main(cfg: Config) -> None:
     # Optimization loop
     pbar = tqdm(range(cfg.general.iters))
     for i in pbar:
+        # Smoothing
+        if ((i + 1) % cfg.general.smooth_every) == 0:
+            params = jax.tree_util.tree_map(
+                lambda x : (
+                    (
+                        jnp.array(
+                            scipy.signal.savgol_filter(
+                                jax_to_numpy(x), 10, 7, axis=0
+                            )
+                        ) * cfg.general.blend
+                    ) + (x * (1 - cfg.general.blend))
+                ) if (len(x.shape) > 0) and (x.shape[0] == n_frames) else x,
+                params
+            )
+
         # Calculate gradients
         (loss, audio), grads = grad_value(params, PRNG_key.split())
 
